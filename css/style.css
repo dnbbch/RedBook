@@ -1,0 +1,163 @@
+/*Обнуляем дефолтные стили*/
+html {
+  box-sizing: border-box;
+  font-size: 20px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h3,
+h4,
+h5,
+h6,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+p {
+  font-size: 12px;
+  font-family: "Inter", sans-serif;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: "Noto Serif Display", serif;
+  background-color: #f7f4f0;
+  color: #131313;
+  font-size: 16px;
+}
+
+/*Переменные*/
+:root {
+  --index: calc(1vw + 1vh);
+  --gallery-gap: calc(var(--index) * 10);
+}
+
+/*Стили для шапки*/
+.header-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  margin: 12px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  border: #df653e solid 5px;
+}
+
+.logo {
+  margin: 0;
+  font-family: "Noto Serif Display", serif;
+  color: #df653e;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 42px;
+  flex: 70%;
+}
+
+.text-info {
+  margin: 0;
+  color: #131313;
+  font-family: "Inter", sans-serif;
+  text-align: right;
+  flex: 30%;
+}
+
+.nav {
+  margin: 12px;
+  background-color: #e8e8e8;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 30px;
+}
+
+.nav > li {
+  margin-left: 48px;
+  margin-right: 48px;
+}
+
+.nav > li > a {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  color: #131313;
+  padding: 12px 10px;
+  margin: 0.5px;
+  text-decoration: none;
+}
+
+.nav > li > a:hover {
+  color: #df653e;
+  transition: 0.5s;
+}
+
+.nav > li > a:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 5px;
+  background-color: #df653e;
+
+  transition: width 0.5s;
+}
+
+.nav > li > a:hover:before {
+  width: 100%;
+}
+
+/*Стили для галереи*/
+img {
+  box-shadow: 6px 6px 20px #969696;
+}
+.container {
+  margin: 12px;
+  padding: calc(var(--index) * 8) 0;
+  border: #df653e solid 5px;
+}
+
+.gallery {
+  display: flex;
+}
+
+.gallery > * {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.gallery__item {
+  max-width: calc(var(--index) * 20);
+  margin-bottom: var(--gallery-gap);
+  border-radius: 8px;
+}
+
+.text-block {
+  position: relative;
+}
+
+.text-block__h {
+  font-size: 2rem;
+  line-height: 2.3rem;
+  color: #131313;
+  margin-bottom: 1.5rem;
+}
