@@ -4,7 +4,7 @@ ScrollSmoother.create({
   wrapper: ".wrapper",
   content: ".content",
   smooth: 1.5,
-  effects: true,
+  effects: true
 });
 
 gsap.fromTo(
@@ -25,13 +25,11 @@ let itemsL = gsap.utils.toArray(".gallery__left .gallery__item");
 itemsL.forEach((item) => {
   gsap.fromTo(
     item,
-    { x: -60, opacity: 0 },
-    {
-      opacity: 1,
-      x: 0,
-      scrollTrigger: {
+    { x: -200, opacity: 0 },
+    { opacity: 1, x: 0, scrollTrigger: {
         trigger: item,
-        start: 100,
+        start: '-850',
+        end: '-100',
         scrub: true,
       },
     }
@@ -43,13 +41,14 @@ let itemsR = gsap.utils.toArray(".gallery__right .gallery__item");
 itemsR.forEach((item) => {
   gsap.fromTo(
     item,
-    { x: 60, opacity: 0 },
+    { x: 200, opacity: 0 },
     {
       opacity: 1,
       x: 0,
       scrollTrigger: {
         trigger: item,
-        start: 20,
+        start: '-850',
+        end: '-150',
         scrub: true,
       },
     }
