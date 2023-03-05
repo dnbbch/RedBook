@@ -1,10 +1,11 @@
 gsap.registerPlugin(ScrollSmoother, ScrollSmoother);
 
-ScrollSmoother.create({
-  wrapper: ".wrapper",
-  content: ".content",
+let smoother = ScrollSmoother.create({
+  wrapper: '#smooth-wrapper',
+  content: '#smooth-content',
   smooth: 1.5,
-  effects: true
+  effects: true,
+  ignoreMobileResize: true,
 });
 
 gsap.fromTo(
@@ -29,7 +30,7 @@ itemsL.forEach((item) => {
     { opacity: 1, x: 0, scrollTrigger: {
         trigger: item,
         start: '-850',
-        end: '-100',
+        end: '-150',
         scrub: true,
       },
     }

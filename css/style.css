@@ -136,7 +136,7 @@ body {
 }
 
 /* Стили для галереи */
-img {
+img:not(.icon) {
   box-shadow: 6px 6px 20px #969696;
 }
 .container {
@@ -167,36 +167,44 @@ img {
 }
 
 .text-block__h {
-  font-size: 2rem;
-  line-height: 2.3rem;
+  font-size: calc(var(--index) * 2.5);;
+  line-height: calc(var(--index) * 2.6);
   font-weight: 700;
   color: #131313;
   margin-bottom: 1.5rem;
 }
 
+.text-block__p {
+  flex-wrap: wrap;
+}
+
+footer {
+  height: 100px;
+}
+
 .footer__nav {
   margin: 12px;
   background-color: #e8e8e8;
-  font-family: "Inter", sans-serif;
   display: flex;
   justify-content: center;
-  list-style-type: none;
   padding: 15px;
-  font-size: 12px;
+  flex-wrap: wrap;
 }
 
 .footer__nav > li {
-  margin-left: 48px;
-  margin-right: 48px;
+  margin-left: 60px;
+  margin-right: 60px;
 }
 
 .footer__nav > li > a {
   display: block;
   cursor: pointer;
-  color: #131313;
-  padding: 12px 10px;
-  text-decoration: none;
+  transition: .5s;
   font-size: 12px;
+  color: #131313;
+  font-family: Inter;
+  text-decoration: none;
+  padding: 15px;
   transition: .5s;
 }
 
@@ -213,29 +221,34 @@ img {
 }
 
 .news__card {
-  display: flexbox;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
 
 .news__title {
-  max-width: calc(var(--index) * 33);
+  max-width: calc(var(--index) * 25);
   margin: 0 auto;
   margin-top: 40px;
   margin-bottom: 40px;
   font-weight: 700;
+  font-size: calc(var(--index) * 1.25);
 }
 
 .news__image {
   display: block;
-  max-width: calc(var(--index) * 40);
+  max-width: calc(var(--index) * 30);
   margin: 0 auto;
   border-radius: 8px;
+  transition: .5s;
+}
+
+.news__image:hover {
+  transform: scale(1.45);
 }
 
 .news__text {
-  max-width: calc(var(--index) * 40);
+  max-width: calc(var(--index) * 30);
   text-align: justify;
   margin: 0 auto;
   margin-top: 40px;
@@ -245,7 +258,7 @@ img {
 hr {
   margin-top: 20px;
   margin-bottom: 20px;
-  max-width: calc(var(--index) * 40);
+  max-width: calc(var(--index) * 30);
   height: 5px;
   border: none;
   color: #df653e;
@@ -253,7 +266,7 @@ hr {
 }
 
 .news__nav {
-  max-width: calc(var(--index) * 40);
+  max-width: calc(var(--index) * 30);
   margin: 0 auto;
   position: relative;
   font-family: "Inter", sans-serif;
@@ -262,11 +275,12 @@ hr {
   list-style-type: none;
   font-size: 12px;
   margin-bottom: 40px;
+  flex-wrap: wrap;
 }
 
 .news__nav > li {
-  margin-left: 40px;
-  margin-right: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .news__nav > li > a {
@@ -281,4 +295,78 @@ hr {
 
 .news__nav > li > a:hover {
   color: #df653e;
+}
+
+/* Стили для вкладки контактов */
+.contacts__title {
+  font-size: calc(var(--index) * 2.3);
+  font-weight: 700;
+  text-align: center;
+  padding-top: 170px;
+  padding-bottom: 60px;
+}
+
+.contacts__nav {
+  padding-bottom: 170px;
+  max-width: calc(var(--index) * 90);
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  font-size: 12px;
+  flex-wrap: wrap;
+}
+
+.contacts__nav > li {
+  text-align: center;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.contacts__nav > li > h2 {
+  font-size: calc(var(--index) * 1.2);
+  font-weight: 400;
+}
+
+.contacts__nav > li > a {
+  text-decoration: none;
+  color: #131313;
+  transition: .5s;
+}
+
+.contacts__nav > li > a:hover {
+  color: #df653e;
+}
+
+.icon {
+  width: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
+  transition: .5s;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+}
+
+.contacts-footer {
+  height: 604px;
+}
+
+/* Скроллбар */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #df653e;
+}
+
+::-webkit-scrollbar-track {
+  background: #f7f4f0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #e79174;
 }
