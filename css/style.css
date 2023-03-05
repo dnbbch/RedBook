@@ -193,10 +193,6 @@ img {
 .footer__nav > li > a {
   display: block;
   cursor: pointer;
-  color: #131313;
-  padding: 12px 10px;
-  text-decoration: none;
-  font-size: 12px;
   transition: .5s;
 }
 
