@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Contacts</title>
+    <link rel="shortcut icon" href="icons/book_icon.png" type="image/png" />
+
+    <script src="libs/gsap/gsap.min.js" defer></script>
+    <script src="libs/gsap/ScrollTrigger.min.js" defer></script>
+    <script src="libs/gsap/ScrollSmoother.min.js" defer></script>
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&family=Noto+Serif+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="js/app.js" defer></script>
+  </head>
+  <body>
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        <!--Шапка сайта-->
+        <header>
+          <!--Блок с названием страницы-->
+          <div class="bg">
+            <div class="header-wrapper">
+              <div class="header">
+                <h1 class="logo-news">КОНТАКТЫ</h1>
+              </div>
+            </div>
+          </div>
+          <!--Шапка сайта-->
+          <div class="header-wrapper">
+            <nav>
+              <ul class="nav">
+                <li><a href="index.html">Галерея</a></li>
+                <li><a href="news.html">Новости</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+        <!--Основная часть сайта-->
+        <section class="contacts-footer">
+          <div class="header-wrapper">
+            <main class="main-content">
+              <h1 class="contacts__title">Как с нами связаться?</h1>
+              <nav>
+                <ul class="contacts__nav">
+                  <li>
+                    <h2>Электронная почта</h2>
+                    <a href="mailto:redBookRepublicBuryatia@mail.ru"
+                      ><p>redBookRepublicBuryatia@mail.ru</p></a
+                    >
+                  </li>
+                  <li>
+                    <h2>Наши соц. сети</h2>
+                    <a href=""
+                      ><img
+                        class="icon"
+                        src="icons/telegram.png"
+                        alt="Telegram"
+                    /></a>
+                    <a href=""
+                      ><img class="icon" src="icons/vk.png" alt="Vkontakte"
+                    /></a>
+                    <a href=""
+                      ><img
+                        class="icon"
+                        src="icons/instagram.png"
+                        alt="instagram"
+                    /></a>
+                  </li>
+                  <li>
+                    <h2>Номер телефона</h2>
+                    <p>+7 (***) ***-**-**</p>
+                  </li>
+                </ul>
+              </nav>
+            </main>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
